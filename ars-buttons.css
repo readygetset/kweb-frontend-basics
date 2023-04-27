@@ -1,0 +1,13 @@
+.numbers .number {
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background-color:rgb(255, 126, 126);
+    text-align:center;
+    line-height:70px;
+    font-size:30px;
+    border-style:solid;
+    border-color:black;
+    float:right;
+    margin:30px 10px 30px 10px;
+}
