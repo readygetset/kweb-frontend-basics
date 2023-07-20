@@ -1,52 +1,96 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fafafa;
-}
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  :root{
+    --mainColor: #fafafa;
+    --secondColor: #dbdbdb;
+  }
+  #header{
+    margin-bottom: 20px;
+  }
+  #menu{
+    position: relative;
+    border: 1px solid lightgray;
+  }
+  #logo{
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+  #right{
+    float:right;
+    margin-top:0.7rem;
+  }
+  #kweb{
+    font-size: 1rem;
+    border:none;
+    background-color: var(--mainColor);
+    font-weight: bold;
+    cursor:pointer;
+  }
+  #sort{
+    font-size: 1rem;
+    border:none;
+    background-color: var(--mainColor);
+    font-weight: bold;
+    margin-right: 2rem;
+    cursor:pointer;
+  }
+  #top{
+    display:block;
+    position: fixed;
+    background-color: #fb3958;
+    border:none;
+    width:50px;
+    height:50px;
+    border-radius: 60%;
+    left:90%;
+    top:87%;
+    text-align: center;
+    cursor:pointer;
+  }
+  #topbtn{
+    display:block;
+    color:white;
+    text-decoration: none;
+    margin-top:30%;
+    scroll-behavior: smooth;
+  }
 
-:root{
-  --mainColor: #fafafa;
-}
-#menu{
-  position: relative;
-  border: 1px solid lightgray;
-}
-#logo{
-  margin-left: 2rem;
-  margin-top: 1rem;
-}
-#right{
-  float:right;
-  margin-top:0.7rem;
-}
-#kweb{
-  font-size: 17px;
-  border:none;
-  background-color: var(--mainColor);
-  font-weight: bold;
-}
-#sort{
-  font-size: 17px;
-  border:none;
-  background-color: var(--mainColor);
-  font-weight: bold;
-  margin-right: 2rem;
-}
-#top{
-  display:block;
-  position: fixed;
-  background-color: #fb3958;
-  border:none;
-  width:50px;
-  height:50px;
-  border-radius: 60%;
-  left:90%;
-  top:87%;
-  text-align: center;
-}
-#topbtn{
-  display:block;
-  color:white;
-  text-decoration: none;
-  margin-top:30%
-  
-}
+  #posts{
+    margin: 0 auto;
+    width:60%;
+  }
+  #post{
+    padding: 20px 20px 20px 20px;
+    border: 1px solid var(--secondColor)
+  }
+  #profile{
+    margin-bottom: 10px;
+  }
+  #profileImg{
+    float:left;
+    margin-right:10px;
+    background-color: var(--secondColor);
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+  }
+  #userName{
+    font-weight: bold;
+  }
+  #img{
+    display: block;
+    width:100%;
+    margin-bottom:10px;
+  }
+  #post:hover{
+    opacity: 0.7;
+  }
+  #likeCnt{
+    margin-left: 5px;
+    font-weight:bold;
+  }
