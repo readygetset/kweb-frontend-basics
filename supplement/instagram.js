@@ -46,29 +46,36 @@ const POSTS = [
 
 function createPost(post) {
   const postElement = document.createElement("div");
-
+  
+  //1.1
+  const profile=document.createElement('div');
   const profileImg=document.createElement('div');
-  const username=document.createElement('span');
+  const userName=document.createElement('span');
   const img=document.createElement('img');
   const like=document.createElement('div');
   const likeImg=document.createElement('img');
   const likeCnt=document.createElement('span');
   const text=document.createElement('p');
-  username.append(post.username);
+  
+  postElement.setAttribute('id','post');
+  profile.setAttribute('id','profile');
+  profileImg.setAttribute('id','profileImg');
+  userName.setAttribute('id','userName');
+  img.setAttribute('id','img');
+  likeImg.setAttribute('id','likeImg');
+  likeCnt.setAttribute('id','likeCnt');
+  text.setAttribute('id','text');
+
+  profile.append(profileImg,userName);
+  userName.append(post.username);
   img.setAttribute('src',post.image);
   like.append(likeImg,likeCnt);
   likeImg.setAttribute('src','./img/heart.png');
   likeCnt.append(post.likes);
   text.append(post.description);
-  postElement.append(profileImg,username,img,like,text);
-  
-  /**
-   * # 1.1 createPost 함수 구현
-   *
-   *
-   *
-   *
-   */
+  postElement.append(profile,img,like,text);
+  //
+
   return postElement;
 }
 
@@ -76,16 +83,11 @@ function createPost(post) {
 function main() {
   // 게시물 엘리먼트를 넣어야 하는 곳
   const postsContainer = document.getElementById("posts");
-  postsContainer.append(createPost(POSTS[0]));
 
-  /**
-   * # 1.2 createPost로 만든 post를 postsContainer에 하나씩 넣는 코드
-   *
-   *
-   *
-   *
-   *
-   */
+  //1.2
+  for(let i=0; i<POSTS.length; i++){
+    postsContainer.append(createPost(POSTS[i]));
+  }
 }
 
 main();
