@@ -91,3 +91,15 @@ function main() {
 }
 
 main();
+
+const sort=document.getElementById('sort');
+sort.onclick=()=>{
+  POSTS.sort(function(x,y){
+    return y.likes-x.likes;
+  })
+  console.log(POSTS);
+  const postsContainer=document.getElementById('posts');
+  postsContainer.innerHTML='';
+  console.log(postsContainer);
+  main();
+};
